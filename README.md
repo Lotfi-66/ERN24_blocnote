@@ -1,0 +1,1 @@
+Pour lancer en localhost : npx vite
