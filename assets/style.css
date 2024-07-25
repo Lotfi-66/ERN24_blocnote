@@ -1,0 +1,170 @@
+
+/* RESET */
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* ------COMMUN------ */
+body {
+  background: transparent url(./img/cork.jpg) center center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:focus {
+  outline: 2px solid #0a0;
+}
+
+input,
+textarea {
+  border-radius: 2px;
+  color: #333;
+  padding: 10px 7px;
+}
+
+button {
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 7px 5px;
+}
+
+button:hover {
+  outline: 2px solid #fc0;
+}
+
+header {
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+header>h1 {
+  font-size: 28px;
+  padding: 15px;
+}
+
+header>form {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+}
+
+header>form>textarea {
+  flex-grow: 1;
+}
+
+header>div {
+  align-items: center;
+  display: flex;
+  padding: 15px;
+}
+
+form {
+  display: flex;
+  gap: 20px;
+
+}
+
+
+/*---NOTE---*/
+.nota {
+  background-color: #ffff80;
+  border: 1px solid #cc6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 290px;
+  padding: 15px;
+  width: 290px;
+}
+
+.nota:nth-child(odd) {
+  transform: rotateZ(-3deg);
+}
+
+.nota:nth-child(even) {
+  transform: rotateZ(3deg);
+}
+
+.nota>div {
+  padding: 5px;
+}
+
+.nota[data-mode='view'] [data-cmd='edit'],
+.nota[data-mode='edit'] [data-cmd='view'] {
+  display: none;
+}
+
+.nota-header {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+
+.nota-times {
+  color: #555;
+  flex-grow: 1;
+  font-size: 14px;
+
+}
+
+.nota [data-cmd] {
+  display: flex;
+  gap: 8px;
+}
+
+.nota-title {
+  font-weight: 700;
+}
+
+.nota-content {
+  flex-grow: 1;
+
+}
+
+.nota-title[contenteditable],
+.note-content[contenteditable] {
+  border: solid 1px #666;
+  border-radius: 2px;
+}
+
+/*---MAIN---*/
+main {
+  padding: 15px;
+}
+
+#nota-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+
+
+/*----RESPONSIVE----*/
+
+@media(min-width : 992px) {
+  header {
+    flex-direction: row;
+  }
+}
